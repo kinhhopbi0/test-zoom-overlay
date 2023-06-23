@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Zoom Meeting SDK Sample JavaScript</title>
+
+    <!-- For Client View -->
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/2.13.0/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/2.13.0/css/react-select.css" />
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Origin Trials to enable Gallery View in Chrome/Edge -->
+    <!-- More Info: https://developers.zoom.us/docs/meeting-sdk/web/gallery-view/ -->
+    <!-- SharedArrayBuffers in non-isolated pages on Desktop platforms -->
+    <meta http-equiv="origin-trial" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+
+    <main>
+      <h1>Zoom Meeting SDK Sample JavaScript</h1>
+
+      <div class="container">
+          <!-- For Component View -->
+        <div id="meetingSDKElement">
+          <!-- Zoom Meeting SDK Rendered Here -->
+        </div>
+        <div class="zoom-overlay">
+          <p>tesss  text overlay zoom</p>
+          <button>Click me</button>
+        </div>
+
+      </div>
+      <input type="text" name="meeting_id" placeholder="meeting id"/>
+      <input type="text" name="passcode" placeholder="passcode"/>
+      <button onClick="getSignature()">Join Meeting</button>
+    </main>
+
+    <!-- For Component and Client View -->
+    <script src="https://source.zoom.us/2.13.0/lib/vendor/react.min.js"></script>
+    <script src="https://source.zoom.us/2.13.0/lib/vendor/react-dom.min.js"></script>
+    <script src="https://source.zoom.us/2.13.0/lib/vendor/redux.min.js"></script>
+    <script src="https://source.zoom.us/2.13.0/lib/vendor/redux-thunk.min.js"></script>
+    <script src="https://source.zoom.us/2.13.0/lib/vendor/lodash.min.js"></script>
+    > <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrsasign/8.0.20/jsrsasign-all-min.js"></script>
+    <!-- For Client View -->
+    <!-- <script src="https://source.zoom.us/zoom-meeting-2.13.0.min.js"></script> -->
+    <!-- <script type="text/javascript" src="client-view.js"></script> -->
+
+    <!-- For Component View -->
+    <script src="https://source.zoom.us/2.13.0/zoom-meeting-embedded-2.13.0.min.js"></script>
+    <script type="text/javascript" src="component-view.js"></script>
+
+  </body>
+</html>
