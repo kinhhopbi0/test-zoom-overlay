@@ -1,0 +1,22 @@
+Mục đích:
+- Làm prototype việc nhúng Zoom vào web, cho phép hiển thị text của mình chèn lên view của Zoom
+
+Hiện trạng:
+- đã có code logic tạo token join vào meeting ở file component-view.js
+
+
+Các bước test:
+1. tạo tài khoản trên trang zoom.us
+2. login vào và tạo tài meeting schedule
+3. dùng 1 máy làm host, start  meeting
+4. dùng 1 máy khác làm client, open web này rồi điền meeting id, password để join
+
+
+Cần làm:
+- thử dùng client view để hiển thị full màn hình xem có chèn được text của mình lên trên màn của zoom không, 
+vầ kiểm tra trên Mac, trên mobile hiển thị có ok không.
+- hiển thị responsive trên mobile 
+- khi máy host share màn hình trên Macbook thì trên máy client đang bị vỡ giao diện => cần fix
+
+Tài liệu của zoom: 
+https://marketplacefront.zoom.us/sdk/meeting/web/index.html
