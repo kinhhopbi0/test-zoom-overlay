@@ -2,8 +2,10 @@ const client = ZoomMtgEmbedded.createClient()
 
 let meetingSDKElement = document.getElementById('meetingSDKElement')
 
-var authEndpoint = 'http://localhost:4000/'
 var sdkKey = 'BJvHvXAETNelXgCaqayrRg'
+const clientId = "BJvHvXAETNelXgCaqayrRg";
+const clientSecret = "u9TMk31Y17NgVM9P5KpDvVYX5IWUIh1z"
+
 var meetingNumber = document.getElementsByName("meeting_id")[0].value;
 var passWord = document.getElementsByName("passcode")[0].value;
 var overLayContainer = document.querySelector(".zoom-overlay");
@@ -72,27 +74,9 @@ function getSignature() {
     return;
   }
 
-  const clientId = "BJvHvXAETNelXgCaqayrRg";
-  const clientSecret = "u9TMk31Y17NgVM9P5KpDvVYX5IWUIh1z"
+  
   const signature = generateSignature(clientId, clientSecret, meetingNumber, role);
   startMeeting(signature)
-  // fetch(authEndpoint, {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'application/json'
-  //   },
-  //   body: JSON.stringify({
-  //     meetingNumber: meetingNumber,
-  //     role: role
-  //   })
-  // }).then((response) => {
-  //   return response.json()
-  // }).then((data) => {
-  //   console.log(data)
-  //   startMeeting(data.signature)
-  // }).catch((error) => {
-  // 	console.log(error)
-  // })
 }
 
 function startMeeting(signature) {
