@@ -49,3 +49,13 @@ main button {
 main button:hover {
   background-color: #2681F2;
 }
+#custom-area {
+  position: fixed;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 10px;
+  z-index: 1000;
+
+}
